@@ -1,0 +1,222 @@
+ body {
+	 
+	 background-color: #f7f7f7;
+	 height: auto;
+	 -webkit-user-select: none;
+	 
+ }
+ 
+ /*-----*/
+ 
+ul { /*This is the taskbar*/ 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0D4F8B;
+	opacity: 1;
+	right: 0;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.04),0 17px 50px 0 rgba(0,0,0,0.19);
+	z-index: 5; 
+	
+}
+
+.bar { 
+    display: block;
+    color: #fff;
+    padding: 24px 20px;
+	text-decoration: none;
+	font-family: Nirmala UI;
+	font-weight: bold;
+	text-align: center
+	
+	
+	-webkit-transition-duration: 10s; 
+    transition-duration: 0.4s;
+}
+
+.bar:hover:not(.active) {
+    background-color: #f0f0f0;
+	color: #0D4F8B;
+}
+
+.active {
+	cursor:pointer;
+	font-family: Nirmala UI;
+	font-weight: bold;
+	text-align: center;
+	display: block;
+    color: #fff;
+    padding: 24px 20px;
+	text-decoration: none;
+	font-family: Nirmala UI;
+	font-weight: bold;
+}
+
+ul {
+    position: fixed;
+    top: 0;
+    width: 100%;
+} /*this makes sure that the navbar doesn't move whether you scroll down or not*/
+
+
+/*-----*/
+
+.timebox {
+	height: 400px;
+	width: 1000px;
+	vertical-align: middle;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	top: 150px;
+	text-align: center;
+}
+
+.scramblebox {
+	height: 80px;
+	width: 800px;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	top: 250px;
+	text-align: center;
+}
+
+.time {
+	font-family: Nirmala UI;
+	font-weight: bold;
+	font-size: 300px;
+	position: relative;
+	left: 35px;
+	color: #bbb;
+}
+
+.time1 {
+	position: relative;
+	left: -80px;
+}
+
+.scramble {
+	font-family: Nirmala UI;
+	font-weight: normal;
+	font-size: 3em;
+	color: #bbb;
+}
+
+
+
+/*Sidebar*/
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 69px;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+	
+}
+
+.title {
+    padding: 8px 8px 8px 32px;
+	position: relative;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.2s;
+	font-family: Nirmala UI;
+	font-weight: bold;
+	top: -40px;
+	cursor:pointer;
+	text-align: center;
+	padding: 0px 10px 10px 10px;
+	
+}
+
+.sidenav .togglebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+	
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.section {
+	text-decoration: none;
+	width: 250px;
+	height: 40px;
+	color: #fff;
+	text-align: center;
+	-webkit-transition-duration: 10s; 
+    transition-duration: 0.4s;
+	position: relative;
+	
+}
+.section:hover {
+	text-decoration: none;
+	background-color: #222;
+	color: #818181;
+	
+}
+
+td {
+	font-family: Nirmala UI;
+	font-weight: bold;
+	cursor:pointer;
+}
+
+.context {
+	position: relative;
+	opacity: 1;
+	text-decoration: none;
+	width: 250px;
+	height: 40px;
+	color: #fff;
+	text-align: center;
+	-webkit-transition-duration: 10s; 
+    transition-duration: 0.4s;
+	cursor:default;
+	
+}
+
+.section:hover .context{
+	opacity: 1;
+	left: 0%;
+}
+
+.simple {
+	cursor:default;
+}
+
+.stats {
+    padding: 8px 8px 8px 32px;
+	position: relative;
+    text-decoration: none;
+    font-size: 22px;
+    color: #818181;
+	top: -25px;
+    display: block;
+    transition: 0.2s;
+	font-family: Nirmala UI;
+	font-weight: bold;
+	cursor: pointer;
+	text-align: center;
+	padding: 0px 10px 10px 10px;
+	-webkit-transition-duration: 10s; 
+    transition-duration: 0.4s;
+}
+

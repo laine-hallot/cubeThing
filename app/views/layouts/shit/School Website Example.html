@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html ><!DOCTYPE html>
+<html >
+  <head>
+  <style>
+
+  
+  .twitterlogo {
+  
+	height: 50px;
+	width: 50px;
+	opacity: 1;
+  
+  }
+  
+  #socialBox {
+  
+	width: 400px;
+	height: 50px;
+	position: relative;
+  
+  }
+  
+  #sectioncircle {
+  
+  width: 1000px;
+  height: 300px;
+  
+  }
+  
+  #circle {
+  
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: #555;
+  position: relative;
+  right: 350px;
+  top: 50px;
+  z-index: 1;
+  -webkit-transition-duration: 10s;
+  transition-duration: 0.3s;
+  
+  }
+  
+  #circleInside {
+  
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: relative;
+  top: 15px;
+  z-index: 9;
+  -webkit-transition-duration: 10s;
+  transition-duration: 0.3s;
+  
+  }
+  
+  #circle:hover {
+  
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  top: 0px;
+  right: 350px;
+  margin: auto;
+  background-color: #333;
+  position: relative;
+  box-shadow: 0 16px 16px 0 rgba(0,0,0,0.04),0 17px 50px 0 rgba(0,0,0,0.19);
+  
+  }
+  
+  #circle:hover #circleInside{
+  
+  height: 230px;
+  width: 230px;
+  border-radius: 50%;
+  position: relative;
+  top: 35px;
+  margin: auto;
+  background-color: #fff;
+  
+  
+  }
+  
+  .AboutTextBox {
+  
+	height: auto;
+	width: 400px;
+	background-color: #eee;
+	padding: 3px 3px;
+	opacity: 0;
+	position: relative;
+	left: 300px;
+	margin-top: auto;
+	border-radius: 2px;
+	-webkit-transition-duration: 4s;
+	transition-duration: 0.3s;
+	
+  
+  }
+  
+  #circle:hover .AboutTextBox {
+  
+	opacity: 1;
+	position: relative;
+	left: 350px;
+	margin-top: auto;
+	-webkit-transition-delay: 0.4s;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.04),0 17px 50px 0 rgba(0,0,0,0.19);
+	
+  }
+  
+  #creditBar {
+  
+  width: 100%;
+  height 10px;
+  background-color: #1d1d1d;
+  position: relative;
+  top: 134px;
+  
+  }
+  
+  #About {
+  
+	background-color: #fff;
+	width: 100%;
+	height: 840px;
+	position: relative;
+	top: -47px;
+  
+  }
+  
+  .AboutUs {
+
+	position: relative;
+	top: 0px;
+
+}
+	
+	#PlusBox {
+	
+	width: 430px;
+	height: 430px;
+	background-color: #006494;
+	
+	}
+	
+	#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+	top: 175px;
+}
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: #EEEEEE;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+#heart:after {
+
+}
+	
+	#section {
+	border: 5px;
+	background-color: #ffffff;
+	height: 450px;
+	width: 450px;
+	border-radius: 2px;
+	margin: auto;
+	opacity: 1;
+	-webkit-transition-duration: 10s; 
+    transition-duration: 0.9s;
+
+}
+
+	#section:hover {
+	
+	width: 1000px;
+	
+	}
+	
+	#section:hover #BuyBox {
+	
+	opacity: 1;
+	-webkit-transition-delay: 0.7s;
+	
+	}
+	
+	#section:hover #textBoxShoes {
+	
+	opacity: 1;
+	-webkit-transition-delay: 0.7s;
+	
+	}
+	
+	#section:hover .ShoeName {
+	
+	opacity: 1;
+	-webkit-transition-delay: 0.7s;
+	
+	}
+	
+	#section:hover .Price {
+	
+	opacity: 1;
+	-webkit-transition-delay: 0.7s;
+	
+	}
+	
+	#GreyUp {
+	
+	position: relative;
+	top: -900px;
+	width: 100%;
+	height: 4240px;
+	
+	}
+
+	#sectionInside {
+	background-color: #EFEFEF;
+	height: 430px;
+	width: 430px;
+	border-radius: 2px;
+	position: relative;
+	border: 1px solid;
+	border-color: #888;
+	top: -443px;
+	left: 10px;
+}
+
+	#SectionPicture {
+
+	height: 400px;
+	width: 400px;
+	position: relative;
+	top: 15px;
+	border: 1px solid;
+	border-color: #888;
+}
+
+.TellMeMoreBox {
+
+	height: 100px;
+	width: 200px;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: -750px;
+	padding: 100px 100px;
+
+}
+
+	.ThisIsAPun {
+	
+	font-family: "Agency FB";
+	font-size: 30px;
+	color: #777777;
+	
+	}
+  
+ html, body {
+ 
+	margin: 0;
+	padding: 0;
+ 
+ }
+  
+  #greyBG {
+	background-color: #EEEEEE;
+	height: 2955px;
+	width: 100%;
+	z-index: 7;
+	opacity: 1;
+	right: 0;
+	left: 0;
+	
+  }
+  
+  #credit {
+  
+  background-color: #222;
+  width: 100%;
+  height: 401px;
+  position: relative;
+  top: -34px;
+  z-index:1;
+  
+  }
+
+  .button {
+	font-family: "Agency FB";
+    background-color: #444444; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+	margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 10s; 
+    transition-duration: 0.4s;
+	border-radius: 4px;
+	
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.04),0 17px 50px 0 rgba(0,0,0,0.19);
+	background-color: #eeeeee;
+	color: black;
+	
+}
+
+.Buybutton {
+	position: relative;
+	align: right;
+	font-family: "Agency FB";
+    background-color: #444444; 
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+	margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 10s; 
+    transition-duration: 0.4s;
+	border-radius: 4px;
+	
+}
+
+.Buybutton:hover {
+
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.04),0 17px 50px 0 rgba(0,0,0,0.19);
+	background-color: #eeeeee;
+	color: black;
+}
+  
+  
+body {
+    background-color: #ffffff;
+	height: 4500px;
+}
+
+}
+.Image { /*This controls the picture of the croc*/
+	position: absolute;
+	z-index: -10;
+	
+}
+
+.ImageBox {
+
+	height: 1000px;
+	width: 1000px;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	z-index:-2;
+	top: -300px;
+	padding: 100px 100px;
+
+}
+
+.Title { /*this controls the title of the page*/
+	font-family: "Agency FB";
+	font-size: 100px;
+	color: #2d2d2d;
+	z-index: -1;
+	line-height: 0%;
+
+}
+
+#SmallTitle {
+	font-family: "Agency FB";
+	font-size: 70px;
+	color: #CCCCCC;
+	z-index: -1;
+
+}
+
+.CreditsTitle {
+
+	font-family: "Agency FB";
+	font-size: 50px;
+	color: #ffffff;
+	z-index: -1;
+
+}
+
+#creditParagraph {
+
+	position: relative;
+	top: -40px;
+	margin: auto;
+	width: 600px;
+	height: 150px;
+	
+}
+
+.creditParagraphText {
+
+	font-family: "Agency FB";
+	font-size: 14px;
+	position: relative;
+	top: 5px;
+	color: #ffffff;
+	z-index: -1;
+
+}
+
+.creditParagraphText2 {
+
+	font-family: "Agency FB";
+	font-size: 14px;
+	color: #ffffff;'
+	position: relative;
+	top: 5px;
+	z-index: -1;
+
+}
+
+.copyright {
+
+	font-family: "Agency FB";
+	font-size: 10px;
+	color: #ffffff;
+	position: relative;
+	top: 1px;
+	z-index: 9;
+
+}
+
+.ShoeName {
+
+	font-family: "Agency FB";
+	position: relative;
+	left: 450px;
+	top: 10px;
+	font-size: 30px;
+	color: #111111;
+	opacity: 0;
+	-webkit-transition-duration: 1s; 
+    transition-duration: 0.4s;
+
+}
+
+
+.paragraph {
+	font-family: "Agency FB";
+	position: relative;
+	font-size: 20px;
+	color: #111111;
+	-webkit-transition-duration: 10s; 
+    transition-duration: 0.4s;
+	text-align: justify;
+
+}
+
+.Price {
+
+	font-family: "Agency FB";
+	font-size: 30px;
+	color: #111111;
+	position: relative;
+	top: -20px;	
+	opacity: 0;
+	-webkit-transition-duration: 10s; 
+    transition-duration: 0.4s;
+	
+	
+}
+
+#textBoxShoes {
+
+	height: 100px;
+	width: 544px;
+	overflow: hidden;
+	z-index: 100;
+	position: relative;
+	top: 10px;
+	left: 450px;
+	opacity: 0;
+	-webkit-transition-duration: 10s; 
+    transition-duration: 0.4s;
+
+}
+
+#PriceTag {
+
+	height: 58px;
+	width: 130px;
+	overflow: hidden;
+	z-index: 100;
+	position: relative;
+	top: 249px;
+	left: 450px;
+	margin: top;
+
+}
+
+#BuyBox {
+
+	opacity: 0;
+	height: 58px;
+	width: 95px;
+	overflow: hidden;
+	position: relative;
+	top: 91px;
+	left: 800px;
+	margin: top;
+	padding: 100px 100px; 
+	-webkit-transition-duration: 10s; 
+    transition-duration: 0.4s;
+	
+
+}
+
+ul { /*This is the taskbar*/
+	background-color: #111;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111;
+	opacity: 0.7;
+	right: 0;
+	z-index: 5; /*this makes sure the taskbar is at the front of everything*/
+	
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #cccccc;
+    text-align: center;
+    padding: 20px 16px;
+	text-decoration: none;
+	font-family: "Agency FB"; /*This controls the fonts of the taskbar*/
+}
+
+li a:hover:not(.active) {
+    background-color: #000;
+	
+}
+
+.active {
+	background-color: #006494;
+	opacity: 1;
+}
+
+ul {
+    position: fixed;
+    top: 0;
+    width: 100%;
+} /*this makes sure that the navbar doesn't move whether you scroll down or not*/
+
+.scrolltest {
+
+	position: absolute;
+    top: 10000px;
+	right: 100px;
+	left: 100px;
+	z-index: -1;
+	
+}
+
+span + span {
+    margin-left: 10px;
+}
+
+</style>
+
+<script type="text/javascript">
+	
+var scrollY = 0;
+var distance = 40;
+var speed = 24;
+function autoScrollTo(el) {
+	var currentY = window.pageYOffset;
+	var targetY = document.getElementById(el).offsetTop;
+	var bodyHeight = document.body.offsetHeight;
+	var yPos = currentY + window.innerHeight;
+	var animator = setTimeout('autoScrollTo(\''+el+'\')',speed);
+	if(yPos > bodyHeight){
+		clearTimeout(animator);
+	} else {
+		if(currentY < targetY-distance){
+		    scrollY = currentY+distance;
+		    window.scroll(0, scrollY);
+	    } else {
+		    clearTimeout(animator);
+	    }
+	}
+}
+function resetScroller(el){
+	var currentY = window.pageYOffset;
+    var targetY = document.getElementById(el).offsetTop;
+	var animator = setTimeout('resetScroller(\''+el+'\')',speed);
+	if(currentY > targetY){
+		scrollY = currentY-distance;
+		window.scroll(0, scrollY);
+	} else {
+		clearTimeout(animator);
+	}
+}
+	
+	</script>
+	
+</head>
+<body>
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">Our Shoes</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+	
+<section class="whiteBG">
+	</br></br>
+	<center><h1 class="Title"> Welcome to ShoeAside </h1>
+	<p class="ThisIsAPun"> Yes, this is a pun, shoe me. </p></center>
+</section>
+
+<section>
+	<div class="ImageBox">
+		<img class="Image" src=http://www.jellyegg.com/images/products/zoom/1359124961-67644200.jpg>
+	</div>
+	<div class="TellMeMoreBox">
+		<a href="#" onclick="return false;" onmousedown="autoScrollTo('GreyUp');"><center><button class="button"> Tell Me More </button></center></a>
+	</div>
+</section>
+
+<div id="GreyUp">
+<section id="greyBG" >
+	<h1 id="SmallTitle"><center> Our Shoes </center></h1>
+	
+	<!-- This is a new section-->
+	
+	<span><div id="section">
+	
+		<section>
+			<span class="ShoeName">Adidas Ultra Boost Wood Wood</span>
+		</section>
+		
+		<section>
+			<div id="textBoxShoes" align="justify">
+				<span class="paragraph">These are the Ultra boost collaboration with Wood Wood. One of many Adidas Ultra Boost collaborations. This show features no laces and instead a strap. The colors are white, grey, red, and blue.</span>
+			</div>
+		</section>
+		
+		<section>
+			<div id="PriceTag">
+				<h1 class="Price">Price: $350</h1>
+			</div>
+			<div id="BuyBox">
+				<button class="Buybutton">Buy</button>
+			</div>
+		</section>
+		
+		<section>
+			<div id="sectionInside">
+				<center><img id="SectionPicture" src="https://lh3.googleusercontent.com/qAUfoozn6BEa_MYND26AuTBYd-Qsh-JHeavoxg-GxwTA_t4gOd95r6_eQLxMxJPY29Le2OimzhebrK3aCKWNgw1P4fC3bAL1lKqUWLOC12OnvEv1yt65WrguOccz9NKlwjQCrhQm" ></img></center>
+			</div>
+		</section>
+		
+	</div></span>
+	
+	<!-- This is the end of a section-->
+	<!-- This is a new section-->
+	
+	<span><div id="section">
+	
+		<section>
+			<span class="ShoeName">Adidas Ultra Boost Wood Wood</span>
+		</section>
+		
+		<section>
+			<div id="textBoxShoes" align="justify">
+				<span class="paragraph">These are the Ultra boost collaboration with Wood Wood. One of many Adidas Ultra Boost collaborations. This show features no laces and instead a strap. The colors are white, grey, red, and blue.</span>
+			</div>
+		</section>
+		
+		<section>
+			<div id="PriceTag">
+				<h1 class="Price">Price: $350</h1>
+			</div>
+			<div id="BuyBox">
+				<button class="Buybutton">Buy</button>
+			</div>
+		</section>
+		
+		<section>
+			<div id="sectionInside">
+				<center><img id="SectionPicture" src="https://lh3.googleusercontent.com/qAUfoozn6BEa_MYND26AuTBYd-Qsh-JHeavoxg-GxwTA_t4gOd95r6_eQLxMxJPY29Le2OimzhebrK3aCKWNgw1P4fC3bAL1lKqUWLOC12OnvEv1yt65WrguOccz9NKlwjQCrhQm" ></img></center>
+			</div>
+		</section>
+		
+	</div></span>
+	<!-- This is the end of a section-->
+	<!-- This is a new section-->
+	
+	<span><div id="section">
+	
+		<section>
+			<span class="ShoeName">Shoe Name</span>
+		</section>
+		
+		<section>
+			<div id="textBoxShoes" align="justify">
+				<span class="paragraph">Shoe Description</span>
+			</div>
+		</section>
+		
+		<section>
+			<div id="PriceTag">
+				<h1 class="Price">Price: </h1>
+			</div>
+			<div id="BuyBox">
+				<button class="Buybutton">Buy</button>
+			</div>
+		</section>
+		
+		<section>
+			<div id="sectionInside">
+				<center><div id="PlusBox">
+					<center><div id="heart"></div></center>
+				</div></center>
+			</div>
+		</section>
+		
+	</div></span>
+	
+	<!-- This is the end of a section-->
+	<!-- This is a new section-->
+	
+	<span><div id="section">
+	
+		<section>
+			<span class="ShoeName">Shoe Name</span>
+		</section>
+		
+		<section>
+			<div id="textBoxShoes" align="justify">
+				<span class="paragraph">Shoe Description</span>
+			</div>
+		</section>
+		
+		<section>
+			<div id="PriceTag">
+				<h1 class="Price">Price: </h1>
+			</div>
+			<div id="BuyBox">
+				<button class="Buybutton">Buy</button>
+			</div>
+		</section>
+		
+		<section>
+			<div id="sectionInside">
+				<center><div id="PlusBox">
+					<center><div id="heart"></div></center>
+				</div></center>
+			</div>
+		</section>
+		
+	</div></span>
+	
+	<!-- This is the end of a section-->
+	<!-- This is a new section-->
+	
+	<span><div id="section">
+	
+		<section>
+			<span class="ShoeName">Shoe Name</span>
+		</section>
+		
+		<section>
+			<div id="textBoxShoes" align="justify">
+				<span class="paragraph">Shoe Description</span>
+			</div>
+		</section>
+		
+		<section>
+			<div id="PriceTag">
+				<h1 class="Price">Price: </h1>
+			</div>
+			<div id="BuyBox">
+				<button class="Buybutton">Buy</button>
+			</div>
+		</section>
+		
+		<section>
+			<div id="sectionInside">
+				<center><div id="PlusBox">
+					<center><div id="heart"></div></center>
+				</div></center>
+			</div>
+		</section>
+		
+	</div></span>
+	
+	<!-- This is the end of a section-->
+	<!-- This is a new section-->
+	
+	
+	<span><div id="section">
+	
+		<section>
+			<span class="ShoeName">Shoe Name</span>
+		</section>
+		
+		<section>
+			<div id="textBoxShoes" align="justify">
+				<span class="paragraph">Shoe Description</span>
+			</div>
+		</section>
+		
+		<section>
+			<div id="PriceTag">
+				<h1 class="Price">Price: </h1>
+			</div>
+			<div id="BuyBox">
+				<button class="Buybutton">Buy</button>
+			</div>
+		</section>
+		
+		<section>
+			<div id="sectionInside">
+				<center><div id="PlusBox">
+					<center><div id="heart"></div></center>
+				</div></center>
+			</div>
+		</section>
+		
+	</div></span>
+	
+	<!-- This is the end of a section-->
+	
+</section>
+
+	<!-- About Us section-->
+
+<div id="About">
+	<div class="AboutUs">
+		<center><h1 id="SmallTitle">About Us<h1></center>
+	</div>
+	<center><div id="sectioncircle">
+		<div id="circle">
+			<div id="circleInside">
+			
+				<div class="AboutTextBox">
+					<p class="paragraph dark" >I'm Gaetan Almela, I'm French and I love web design! This is a neat little website I made for Mr. Gambrell, who teaches the best computer science class in the world! I hope I can get extra credit from putting this on the website!<p>
+				
+					<div id="socialBox">
+						<center><a alt="Gaetan's twitter" href="https://twitter.com/GaetanAlmela"><img class="twitterlogo" src="http://i.imgur.com/MYRVR6F.png"></img></a></center>
+					</div>
+				
+				</div>
+				
+			
+			</div>
+		</div>
+	</div></center>
+	
+	<center><div id="sectioncircle">
+		<div id="circle">
+			<div id="circleInside">
+			
+				<div class="AboutTextBox">
+					<p class="paragraph" >What is up my fellow sneakerheads! This is our sneaker site.My name is John DeLappe and I am in Mr. Gambrell's computer class. <p>
+				
+				<div id="socialBox">
+						<center><a alt="John's Instagram" href="https://instagram.com/johndelappe/"><img class="twitterlogo" src="http://i.imgur.com/cUwOnqV.png"></img></a></center>
+				</div>
+				
+				</div>
+			
+			</div>
+		</div>
+	</div></center>
+	
+	
+</div>
+
+	<!-- End of About Us section-->
+	<!-- Credits section-->
+<div id="credit">
+
+	<center><h1 class="CreditsTitle">Credits</h1></center>
+	
+	<div id="creditParagraph">
+	
+	<center><p class="creditParagraphText">Gaetan Almela - Web Designer</p></center>
+	<center><p class="creditParagraphText2">John DeLappe - Company</p></center>
+	
+	</div>
+	<div id="creditBar">
+		<center><p class="copyright">Copyright ShoeAside &#169 - 2016 All Rights Reserved</p></center>
+	</div>
+	<div>
+	
+	
+	
+	</div>
+
+</div>
+
+</div>
+
+	
+ </body>
+  	
+  
+</html>

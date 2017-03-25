@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<noscript>This site requires Javascript</noscript>
+	<link href="source.css" rel="stylesheet" type="text/css" media="screen">
+
+  </head>
+
+  <body onkeydown="spacePress()">
+
+		<!-- Taskbar -->
+		<ul>
+
+			<li><a class="bar" style="position: relative; float:right" href="#about">About</a></li>
+			<li><a class="bar" style="position: relative; float:right" href="#trainer">Trainer</a></li>
+			<li><a class="bar" style="position: relative; top 3%; float:right" href="#timer">Timer</a></li>
+			<li><a class="active" style="position: relative; float:left; left: 2%; height: 21.5px;" href="#home"><img src=http://i.imgur.com/NZdclqX.png alt="Puzzle Timer" style="width:150px;height:60px;top: -20px ; position: relative; float: left;" ></div></a></li>
+			<li><a class="active" style="position: relative;top: -12px; float:left; height: 21.5px;"><span style="font-size:30px;cursor:pointer" onclick= "timer()" >&#9776;</span></a></li>
+
+		</ul>
+
+		<!-- UI -->
+
+		<div class="timebox">
+			<div id="jtime" class="time" >0.
+			<span class="time1" style="font-size:0.75em;">000</span></div>
+		</div>
+		<div class="scramblebox">
+			<h1 class="scramble">---</h1>
+		</div>
+
+		<!-- SideBar -->
+
+
+		<div id="mySidenav" class="sidenav">
+			<a class="title" style="color: #fff; cursor:default;">Times</a>
+
+			<div class="overall">
+				<a class="stats" style="color: #fff; cursor:default;">Stats</a>
+				<div class="arrow"></div>
+			</div>
+
+			<table class="context">
+				<tr>
+					<td class="simple">single</td>
+					<td class="simple">ao5</td>
+					<td class="simple">ao12</td>
+				</tr>
+			</table>
+
+			<!--Auto generated-->
+			<table class="section">
+				<tr>
+					<td>...</td>
+					<td class="a">...</td>
+					<td class="a">...</td>
+				</tr>
+			</table>
+
+			<table class="section">
+				<tr>
+					<td>...</td>
+					<td class="a">...</td>
+					<td class="a">...</td>
+				</tr>
+			</table>
+
+			<table class="section">
+				<tr>
+					<td>...</td>
+					<td class="a">...</td>
+					<td class="a">...</td>
+				</tr>
+			</table>
+		</div>
+
+
+
+  </body>
+  <script src="./script.js"></script>
+</html>
