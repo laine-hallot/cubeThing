@@ -7,6 +7,7 @@ var timerRunning = false;
 //sidebar
 canvas = document.getElementById("canvas");
 ctx = canvas.getContext('2d');
+//canvas.style.display = "none";
 var isclosed = false;
 
 function toggleNav() {
@@ -37,14 +38,14 @@ function TimesHeight() {
 
 }
 
-function ao(){
-	
-	
+function ao() {
+
+
 }
 //timer=====================================================================================
 
 function spacePress(e) {
-	console.log(e.keyCode);
+	//console.log(e.keyCode);
 	if (e.keyCode == 32) {
 		if (!timerRunning) {
 			timer();
@@ -68,6 +69,8 @@ function timer() {
 function timerStop(interToStop) {
 	timerRunning = false;
 	clearInterval(interToStop);
+	data.data.push(sec + milSec / 100)
+
 }
 
 function add(time) {
@@ -91,7 +94,7 @@ function graph() {
 	document.getElementById("div1").style.opacity = "1";
 }
 
-var sampleData = [51, 52, 61, 68, 69, 73, 74, 80, 81, 83, 86, 87, 91, 96, 98, 99, 102, 104, 107, 110, 115, 121, 124, 127, 129, 130, 131, 132, 133, 134, 138, 140, 151, 152, 154, 164, 165, 170, 171, 180, 185, 186, 187, 190, 191, 192, 193, 194, 198, 199];
+var sampleData = [];
 
 function _div(id) {
 	return document.getElementById(id);
@@ -104,35 +107,11 @@ function drawBarChart(dataset, idOfContainer) {
 	if (typeof(dataset) != "object") {
 		return;
 	}
-	/*
-		var heightOfContainer = chartContainer.scrollWidth;
-
-		var widthOfContainer = chartContainer.scrollHeight;
-
-		var widthOfBar = parseInt(widthOfContainer * 2 / dataset.length) - 2;
-
-		for (var i = 0; i < dataset.length; i++) {
-
-			var divElement = document.createElement("div");
-
-			divElement.setAttribute("class", "div2");
-			divElement.style.backgroundColor = "#333";
-			divElement.style.zIndex = "3";
-			divElement.style.marginLeft = parseInt(i * 1 + i * widthOfBar - 100) + "px";
-			divElement.style.height = parseInt(dataset[i]) + "px";
-			divElement.style.width = parseInt(widthOfBar) + "px";
-			divElement.style.top = (heightOfContainer - parseInt(dataset[i]) - "400") + "px";
-			chartContainer.appendChild(divElement);
-
-		}*/
 	return false;
 }
 
 drawBarChart(sampleData, "div1");
-console.log("");
-
-//ctx.fillStyle = "#999";
-//ctx.fillRect(0, 0, canvas.width, canvas.height);
+//console.log("");
 
 
 
@@ -143,37 +122,144 @@ var FPS = 30
 var time = 2 * FPS //time in seconds
 var m = (time * time) / 100;
 setInterval(function() {
+	graphData();
+}, 1000 / FPS);
+
+function graphData() {
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	data.drawLines();
+	data.drawText();
 	if (percent < 100) {
 		iteration++;
 		//percent = -102 / (iteration / 2) + 102
 
-		percent = (-1/m) * ((iteration - time) * (iteration - time)) + 100
-		
+		percent = (-1 / m) * ((iteration - time) * (iteration - time)) + 100
+
 		if (percent > 100) {
 			percent = 100;
 		}
-	
+	}
+
 	data.heightPerc = percent;
 	var code = 0
 	var color = "#222";
-	var codeinc = 360 / sampleData.length;
 
 	for (var q = 0; q < data.data.length; q++) {
 		data.barColor = color;
 		data.drawBar(q);
+	}
+	if (data.hovered) {
+		data.ctx.fillStyle = "#999"
+		var width = 120
+		var height = 50
+		var radius = 25
+		var xOff = 0
+		var yOff = 30
+		if (data.x + width / 2 > canvas.width) {
+			xOff = (data.x + width / 2) - canvas.width
+		}
+		if (data.x - width / 2 < 0) {
+			xOff = data.x - width / 2
+		}
+		if ((data.y - yOff) + height / 2 > canvas.height) {
+			yOff = (data.y + height / 2) - canvas.height;
+		}
+		if ((data.y - yOff) - height / 2 < 0) {
+			yOff = data.y - height / 2;
+		}
+		ctx.fillStyle = "rgba(121,121,121,0.5)"
+		roundRect(ctx, (data.x - xOff) - width / 2, (data.y - yOff) - height / 2, width, height, radius, true, false);
+		data.ctx.fillStyle = "rgb(255, 255, 255)";
+		data.ctx.font = "24px Nirmala UI";
+		data.ctx.textAlign = "center";
+		data.ctx.textBaseline = "middle";
+		var output = secToTime(Math.round(data.data[data.newHover] * 100) / 100);
+		data.ctx.fillText(output, data.x - xOff, data.y - yOff);
+		secToTime(Math.round(data.data[data.newHover] * 100) / 100);
+	}
 
-		code += codeinc;
-	}
-	}
-}, 1000 / FPS);
-data.drawLines();
-data.drawText();
+}
 
 canvas.addEventListener('mousemove', function(evt) {
-	//console.log(evt.x + ", " + evt.y);
 	data.hover(evt.offsetX, evt.offsetY);
 }, false);
 
+function addData(num) {
+	data.data.push(num)
+}
+
+function secToTime(sec){
+	var min = Math.floor(sec / 60);
+	sec = Math.round((sec % 60) * 100)/100;
+	var hour = Math.floor(min / 60);
+	min = Math.round((min % 60) * 100)/100
+	var str;
+	if (sec < 10){
+		str = min + ":0" + sec;
+	} else {
+		str = min + ":" + sec; 
+	}
+	
+	if (min < 10){
+		str = hour + ":0" + str
+	} else {
+		str = hour + ":" + str
+	}
+	return str
+}
+
+function roundRect(ctx, x, y, width, height, radius, fill, stroke) {
+	if (typeof stroke == 'undefined') {
+		stroke = true;
+	}
+	if (typeof radius === 'undefined') {
+		radius = 5;
+	}
+	if (typeof radius === 'number') {
+		radius = {
+			tl: radius,
+			tr: radius,
+			br: radius,
+			bl: radius
+		};
+	} else {
+		var defaultRadius = {
+			tl: 0,
+			tr: 0,
+			br: 0,
+			bl: 0
+		};
+		for (var side in defaultRadius) {
+			radius[side] = radius[side] || defaultRadius[side];
+		}
+	}
+	ctx.beginPath();
+	ctx.moveTo(x + radius.tl, y);
+	ctx.lineTo(x + width - radius.tr, y);
+	ctx.quadraticCurveTo(x + width, y, x + width, y + radius.tr);
+	ctx.lineTo(x + width, y + height - radius.br);
+	ctx.quadraticCurveTo(x + width, y + height, x + width - radius.br, y + height);
+	ctx.lineTo(x + radius.bl, y + height);
+	ctx.quadraticCurveTo(x, y + height, x, y + height - radius.bl);
+	ctx.lineTo(x, y + radius.tl);
+	ctx.quadraticCurveTo(x, y, x + radius.tl, y);
+	ctx.closePath();
+	if (fill) {
+		ctx.fill();
+	}
+	if (stroke) {
+		ctx.stroke();
+	}
+}
+
+function toggleCanvas(){
+	if (canvas.style.display === "none"){
+		canvas.style.displaye = "block";
+		iteration = 0;
+		percent = 0;
+	} else {
+		canvas.style.display = "none";
+	}
+}
 
 console.log();
-
