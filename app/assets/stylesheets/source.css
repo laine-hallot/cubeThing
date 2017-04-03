@@ -1,336 +1,358 @@
 body {
+	background-color: #f7f7f7;
+	height: auto;
+	-webkit-user-select: none;
+}
 
-  background-color: #f7f7f7;
-  height: auto;
-  -webkit-user-select: none;
+/*----*/
 
+#submitTime {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+}
+
+#submitTime:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 /*-----*/
 
-ul { /*This is the taskbar*/
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
-   overflow: hidden;
-   background-color: #333;
- opacity: 1;
- right: 0;
- box-shadow: 0 12px 16px 0 rgba(0,0,0,0.04),0 17px 50px 0 rgba(0,0,0,0.19);
- z-index: 5;
-
+ul {
+	/*This is the taskbar*/
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+	opacity: 1;
+	right: 0;
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.04), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+	z-index: 5;
 }
 
 .bar {
-   display: block;
-   color: #fff;
-   padding: 24px 20px;
- text-decoration: none;
- font-family: Nirmala UI;
- font-weight: bold;
- text-align: center;
-
-
- -webkit-transition-duration: 10s;
-   transition-duration: 0.4s;
+	display: block;
+	color: #fff;
+	padding: 24px 20px;
+	text-decoration: none;
+	font-family: Nirmala UI;
+	font-weight: bold;
+	text-align: center;
+	-webkit-transition-duration: 10s;
+	transition-duration: 0.4s;
 }
 
 .bar:hover:not(.active) {
-   background-color: #f0f0f0;
- color: #333;
+	background-color: #f0f0f0;
+	color: #333;
 }
 
 .active {
- cursor:pointer;
- font-family: Nirmala UI;
- font-weight: bold;
- text-align: center;
- display: block;
-   color: #fff;
-   padding: 24px 20px;
- text-decoration: none;
- font-family: Nirmala UI;
- font-weight: bold;
+	cursor: pointer;
+	font-family: Nirmala UI;
+	font-weight: bold;
+	text-align: center;
+	display: block;
+	color: #fff;
+	padding: 24px 20px;
+	text-decoration: none;
+	font-family: Nirmala UI;
+	font-weight: bold;
 }
 
 ul {
-   position: fixed;
-   top: 0;
-   width: 100%;
-} /*this makes sure that the navbar doesn't move whether you scroll down or not*/
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+
+/*this makes sure that the navbar doesn't move whether you scroll down or not*/
 
 
 /*-----*/
 
 .timebox {
- height: 400px;
- width: 1000px;
- vertical-align: middle;
- margin-right: auto;
- margin-left: auto;
- position: relative;
- top: 150px;
- text-align: center;
- z-index: 1;
+	/*height: 400px;*/
+	/*width: 1000px;*/
+	
+	vertical-align: middle;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	top: 150px;
+	text-align: center;
+	z-index: 1;
 }
 
 .scramblebox {
- height: 80px;
- width: 800px;
- position: relative;
- margin-right: auto;
- margin-left: auto;
- top: 250px;
- text-align: center;
+	height: 80px;
+	/*width: 800px;*/
+	display: block;
+	
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	top: 250px;
+	text-align: center;
 }
 
 .time {
- font-family: Nirmala UI;
- font-weight: bold;
- font-size: 300px;
- position: relative;
- color: #bbb;
+	font-family: Nirmala UI;
+	font-weight: bold;
+	font-size: 300px;
+	position: relative;
+	color: #bbb;
 }
 
 .time1 {
- position: relative;
- left: -80px;
+	position: relative;
+	left: -80px;
 }
 
 .scramble {
- font-family: Nirmala UI;
- font-weight: normal;
- font-size: 3em;
- color: #bbb;
+	font-family: Nirmala UI;
+	font-weight: normal;
+	font-size: 3em;
+	color: #bbb;
 }
+
 
 /*Graphs*/
 
 #div1 {
-
- height: 600px;
- width: 1000px;
- vertical-align: middle;
- background-color: #f7f7f7;
- position: absolute;
- top: 150px;
- text-align: center;
- left: 50%;
- margin-left: -500px;
- opacity: 0;
- z-index: 2;
- -webkit-transition-duration: 10s;
- transition-duration: 0.4s;
+	height: 600px;
+	width: 1000px;
+	vertical-align: middle;
+	background-color: #f7f7f7;
+	position: absolute;
+	top: 150px;
+	text-align: center;
+	left: 50%;
+	margin-left: -500px;
+	opacity: 0;
+	z-index: 2;
+	-webkit-transition-duration: 10s;
+	transition-duration: 0.4s;
 }
 
 .graph {
- height: 600px;
- width: 1000px;
- vertical-align: middle;
- background-color: #eee;
- position: absolute;
- top: 150px;
- text-align: center;
- z-index: 2;
- left: 50%;
- margin-left: -500px;
- opacity: 0;
- -webkit-transition-duration: 10s;
-   transition-duration: 0.4s;
-
+	height: 600px;
+	width: 1000px;
+	vertical-align: middle;
+	background-color: #eee;
+	position: absolute;
+	top: 150px;
+	text-align: center;
+	z-index: 2;
+	left: 50%;
+	margin-left: -500px;
+	opacity: 0;
+	-webkit-transition-duration: 10s;
+	transition-duration: 0.4s;
 }
 
 @keyframes rise {
-   from {height: 0px;}
-   to {height: ;}
+	from {
+		height: 0px;
+	}
+	to {
+		height: ;
+	}
 }
 
 .div2 {
- height: 0px;
- position: absolute;
- width: 0px;
- margin-left: 0px;
- top: 0px;
- z-index: 4;
- box-shadow: 0 12px 16px 0 rgba(0,0,0,0.04),0 17px 50px 0 rgba(0,0,0,0.19);
- -webkit-transition-duration: 10s;
-   transition-duration: 0.4s;
+	height: 0px;
+	position: absolute;
+	width: 0px;
+	margin-left: 0px;
+	top: 0px;
+	z-index: 4;
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.04), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+	-webkit-transition-duration: 10s;
+	transition-duration: 0.4s;
 }
 
 #canvas {
- padding-left: 0;
- padding-right: 0;
- margin-left: auto;
- margin-right: auto;
- display: block;
- margin-top: 100;
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-top: 100;
+	opacity: 1;
 	border-bottom: 2px solid #bbb;
 }
+
 
 /*Sidebar*/
 
 .a {
- opacity: 0;
- font-family: Arial Verdana;
+	opacity: 0;
+	font-family: Arial Verdana;
 }
 
 .t {
- font-weight: 200;
+	font-weight: 200;
 }
 
 .sidenav {
-   height: 100%;
-   width: 0;
-   position: fixed;
-   z-index: 3;
-   top: 0px;
-   left: 0;
-   background-color: #111;
-   transition: 0.2s;
-   padding-top: 60px;
-
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 3;
+	top: 0px;
+	left: 0;
+	background-color: #111;
+	transition: 0.2s;
+	padding-top: 60px;
 }
 
 .title {
- padding: 8px 8px 8px 32px;
- position: relative;
- text-decoration: none;
- font-size: 25px;
- color: #818181;
- display: block;
- transition: 0.2s;
- font-family: Nirmala UI;
- font-weight: bold;
- cursor:pointer;
- text-align: center;
- padding: 0px 10px 10px 10px;
-
+	padding: 8px 8px 8px 32px;
+	position: relative;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.2s;
+	font-family: Nirmala UI;
+	font-weight: bold;
+	cursor: pointer;
+	text-align: center;
+	padding: 0px 10px 10px 10px;
 }
 
 .sidenav .togglebtn {
-   position: absolute;
-   top: 0;
-   right: 25px;
-   font-size: 36px;
-   margin-left: 50px;
-
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
 }
 
 @media screen and (max-height: 450px) {
- .sidenav a {font-size: 18px;}
+	.sidenav a {
+		font-size: 18px;
+	}
 }
 
 .section {
- text-decoration: none;
- width: 250px;
- height: 40px;
- color: #fff;
- text-align: center;
- -webkit-transition-duration: 10s;
-   transition-duration: 0.4s;
- position: relative;
+	text-decoration: none;
+	width: 250px;
+	height: 40px;
+	color: #fff;
+	text-align: center;
+	-webkit-transition-duration: 10s;
+	transition-duration: 0.4s;
+	position: relative;
 }
 
 .sta {
- text-decoration: none;
- width: 250px;
- height: 40px;
- color: #fff;
- right: -25px;
- -webkit-transition-duration: 10s;
-   transition-duration: 0.4s;
- position: relative;
-
+	text-decoration: none;
+	width: 250px;
+	height: 40px;
+	color: #fff;
+	right: -25px;
+	-webkit-transition-duration: 10s;
+	transition-duration: 0.4s;
+	position: relative;
 }
 
 .gg {
-
- width: 115px;
- color: #ddd;
- font-weight: 200;
+	width: 115px;
+	color: #ddd;
+	font-weight: 200;
 }
 
 .section:hover {
- text-decoration: none;
- background-color: #222;
- color: #818181;
- box-shadow: 0 12px 16px 0 rgba(0,0,0,0.04),0 17px 50px 0 rgba(0,0,0,0.19);
-
+	text-decoration: none;
+	background-color: #222;
+	color: #818181;
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.04), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-.section:hover .a{
- opacity: 1;
-
+.section:hover .a {
+	opacity: 1;
 }
 
 td {
- font-family: Nirmala UI;
- font-weight: bold;
- cursor:pointer;
+	font-family: Nirmala UI;
+	font-weight: bold;
+	cursor: pointer;
 }
 
 .context {
- position: relative;
- opacity: 1;
- text-decoration: none;
- width: 250px;
- height: 40px;
- color: #fff;
- text-align: center;
- -webkit-transition-duration: 10s;
- transition-duration: 0.4s;
- cursor:default;
-
+	position: relative;
+	opacity: 1;
+	text-decoration: none;
+	width: 250px;
+	height: 40px;
+	color: #fff;
+	text-align: center;
+	-webkit-transition-duration: 10s;
+	transition-duration: 0.4s;
+	cursor: default;
 }
 
-.section:hover .context{
- opacity: 1;
- left: 0%;
+.section:hover .context {
+	opacity: 1;
+	left: 0%;
 }
 
 .simple {
- cursor:default;
+	cursor: default;
 }
 
 .stats {
- padding: 8px 8px 8px 32px;
- position: relative;
- text-decoration: none;
- font-size: 18px;
- color: #818181;
- top: -25px;
- display: block;
- transition: 0.2s;
- font-family: Nirmala UI;
- font-weight: bold;
- cursor: pointer;
- text-align: left;
- padding: 0px 10px 10px 10px;
- -webkit-transition-duration: 10s;
- transition-duration: 0.4s;
+	padding: 8px 8px 8px 32px;
+	position: relative;
+	text-decoration: none;
+	font-size: 18px;
+	color: #818181;
+	top: -25px;
+	display: block;
+	transition: 0.2s;
+	font-family: Nirmala UI;
+	font-weight: bold;
+	cursor: pointer;
+	text-align: left;
+	padding: 0px 10px 10px 10px;
+	-webkit-transition-duration: 10s;
+	transition-duration: 0.4s;
 }
 
 #Scroll {
- position: relative;
- overflow-y: auto;
- overflow-x: hidden;
- top: 15px;
- height: 0px;
+	position: relative;
+	overflow-y: auto;
+	overflow-x: hidden;
+	top: 15px;
+	height: 0px;
 }
 
 #AboveAll {
- overflow: hidden;
- position: relative;
- top: 15px;
- box-shadow: 0 12px 16px 0 rgba(0,0,0,0.04),0 17px 50px 0 rgba(0,0,0,0.19);
+	overflow: hidden;
+	position: relative;
+	top: 15px;
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.04), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 #scrollHide {
- position: relative;
- height: 100%;
- width: 20px;
- float: left;
- -webkit-transition-duration: 10s;
- transition-duration: 0.3s;
- background-color: green;
+	position: relative;
+	height: 100%;
+	width: 20px;
+	float: left;
+	-webkit-transition-duration: 10s;
+	transition-duration: 0.3s;
+	background-color: green;
 }

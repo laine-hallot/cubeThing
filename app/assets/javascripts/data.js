@@ -6,6 +6,12 @@ class Data {
 		this.ctx = ctx;
 		this.canvas = canvas;
 		this.data = data;
+		
+		this.data.push = function() {
+			ao();
+			return Array.prototype.push.apply(this, arguments);
+		}
+		
 		this.leftLable = true;
 		this.bottomLable = true;
 		this.lines = 20;

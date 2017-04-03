@@ -51,8 +51,6 @@ function spacePress(e) {
 			timer();
 		} else {
 			timerStop(t);
-			httpRequest = new XMLHttpRequest();
-
 		}
 	} else {
 		if (timerRunning) {
@@ -269,3 +267,8 @@ console.log();
 
 
 
+//AJAX====================================================================================
+
+function jaxOff(){
+    
+}

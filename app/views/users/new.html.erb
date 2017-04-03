@@ -8,8 +8,8 @@
 <html lang="en">
 
 <head>
-    <%= stylesheet_link_tag    'source' %>
-    <%= javascript_include_tag 'data' %>
+	<%= stylesheet_link_tag    'source' %>
+
 </head>
 
 <body onclick="closeNav" onresize="TimesHeight()">
@@ -22,7 +22,7 @@
 		<li><a class="bar" style="position: relative; top 3%; float:right" href="#timer">Timer</a></li>
 		<li><a class="active" style="position: relative;top: -12px; float:left; height: 21.5px;"><span style="font-size:30px;cursor:pointer" onclick="toggleNav()">&#9776;</span></a></li>
 		<li>
-			<a class="active" style="position: relative; float:left; left: 2%; height: 21.5px;" href="#home"><img src=http://i.imgur.com/NZdclqX.png alt="Puzzle Timer" style="width:150px;height:60px;top: -20px ; position: relative; float: left;"></div>
+			<a class="active" style="position: relative; float:left; left: 2%; height: 21.5px;" href="#home"><img src=http://i.imgur.com/NZdclqX.png alt="Puzzle Timer" style="width:150px;height:60px;top: -20px ; position: relative; float: left;" onclick="openTimer()"></div>
 			</a>
 		</li>
 
@@ -36,285 +36,86 @@
 	<!--Timer-->
 	<div class="timebox">
 		<div id="jtime" class="time">0.
-			<span id="jtime1" class="time1" style="font-size:0.75em;">000</span></div>
+			<span id="jtime1" class="time1" style="font-size:0.75em;">000</span>
+		</div>
+		<button id="submitTime" onclick="jaxOff()">Submit Time</button>
+		
 	</div>
+
+
+
 	<div class="scramblebox">
 		<h1 class="scramble">---</h1>
 	</div>
-		
-		</div>
-		<!--<canvas id="canvas" height="600" width="900"></canvas>-->
 
-		<!-- SideBar -->
+	</div>
 
+	<div id="mySidenav" class="sidenav">
+		<div id="AboveAll">
+			<a class="title" style="color: #fff; cursor:default;">Times</a>
 
-		<div id="mySidenav" class="sidenav">
-			<div id="AboveAll">
-				<a class="title" style="color: #fff; cursor:default;">Times</a>
-
-				<div class="overall">
-					<!--Auto Generated Every time a milestone is reached -->
-					<table class="sta">
-						<tr>
-							<td class="gg" style="width: 115px; color: #ddd; font-weight: 200; font-weight: bold; position: relative; left: 76px;">Stats</td>
-						</tr>
-					</table>
-
-					<table class="sta">
-						<tr>
-							<td class="gg">single: </td>
-							<td class="gg">Best: </td>
-						</tr>
-					</table>
-
-					<table class="sta">
-						<tr>
-							<td class="gg">ao5: </td>
-							<td class="gg">Best: </td>
-						</tr>
-					</table>
-
-					<table class="sta">
-						<tr>
-							<td class="gg">ao12: </td>
-							<td class="gg">Best: </td>
-						</tr>
-					</table>
-
-				</div>
-
-				<table class="context">
+			<div class="overall">
+				<!--Auto Generated Every time a milestone is reached -->
+				<table class="sta">
 					<tr>
-						<td class="simple">single</td>
-						<td class="simple">ao5</td>
-						<td class="simple">ao12</td>
+						<td class="gg" style="width: 115px; color: #ddd; font-weight: 200; font-weight: bold; position: relative; left: 76px;">Stats</td>
 					</tr>
 				</table>
+
+				<table class="sta">
+					<tr>
+						<td class="gg">single: </td>
+						<td class="gg">Best: </td>
+					</tr>
+				</table>
+
+				<table class="sta">
+					<tr>
+						<td class="gg">ao5: </td>
+						<td class="gg">Best: </td>
+					</tr>
+				</table>
+
+				<table class="sta">
+					<tr>
+						<td class="gg">ao12: </td>
+						<td class="gg">Best: </td>
+					</tr>
+				</table>
+
+
 
 			</div>
-			<div id="Scroll">
 
-				<!--Auto generated-->
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
+			<table class="context">
+				<tr>
+					<td class="simple">single</td>
+					<td class="simple">ao5</td>
+					<td class="simple">ao12</td>
+				</tr>
+			</table>
 
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
+		</div>
+		<div id="Scroll">
 
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
+			<!--Auto generated-->
+			<table class="section">
+				<tr onclick="newDataSet()">
+					<td class="gg">Click for new Data Set</td>
+				</tr>
+			</table>
+		</div>
+	</div>
 
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
 
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
+	<!--Sript and css-->
+	<%= javascript_include_tag 'data' %>	
+        <%= javascript_include_tag 'utils' %>
+        <%= javascript_include_tag 'sidebar' %>
+        <%= javascript_include_tag 'timer' %>
+        <%= javascript_include_tag 'graph' %>
+        <%= javascript_include_tag 'main' %>
 
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
-
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
-
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
-
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
-
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
-
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
-
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
-
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
-
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
-
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
-
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
-
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
-
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
-
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
-
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
-
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
-
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
-
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
-
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
-
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
-
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-					</tr>
-				</table>
-
-				<table class="section">
-					<tr onclick="graph()">
-						<td class="gg">...</td>
-						<td class="gg">...</td>
-						<td class="gg">last</td>
-					</tr>
-				</table>
-			</div>
-</div>
-
-			<!--Sript and css-->
-            <%= javascript_include_tag 'script' %>
 </body>
 <noscript>This site requires Javascript</noscript>
 
