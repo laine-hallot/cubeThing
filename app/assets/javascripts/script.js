@@ -51,6 +51,8 @@ function spacePress(e) {
 			timer();
 		} else {
 			timerStop(t);
+			httpRequest = new XMLHttpRequest();
+
 		}
 	} else {
 		if (timerRunning) {
@@ -263,3 +265,7 @@ function toggleCanvas(){
 }
 
 console.log();
+
+
+
+
