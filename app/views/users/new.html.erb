@@ -38,8 +38,8 @@
 		<div id="jtime" class="time">0.
 			<span id="jtime1" class="time1" style="font-size:0.75em;">000</span>
 		</div>
-		<button id="submitTime" onclick="jaxOff()">Submit Time</button>
-		
+
+        <%= button_to "Submit Time", @user action , remote: true,  id: 'submitTime' %>
 	</div>
 
 

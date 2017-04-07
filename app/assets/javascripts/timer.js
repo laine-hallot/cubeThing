@@ -85,5 +85,6 @@ window.addEventListener("keyup", keyRelease, false);
 
 
 function jaxOff(){
-	console.log("jacked");
+	var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", , true);
 }
