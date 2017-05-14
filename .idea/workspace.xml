@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9ad7079-a586-4ec5-9d76-e521854ad0fc" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/log/development.log" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/new.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/new.html" />
-    </list>
+    <list default="true" id="c9ad7079-a586-4ec5-9d76-e521854ad0fc" name="Default" comment="" />
     <ignored path="PuzzelTimer.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
