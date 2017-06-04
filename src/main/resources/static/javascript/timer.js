@@ -58,6 +58,7 @@ function timerStop(interToStop) {
 	timerRunning = false;
 	clearInterval(interToStop);
 	data.data.push(sec + milSec / 1000);
+	data.pushToDataBase(sec + milSec /1000, "3x3");
 	console.log(data.data);
 }
 
@@ -84,7 +85,3 @@ window.addEventListener("keydown", keyPress, false);
 window.addEventListener("keyup", keyRelease, false);
 
 
-function jaxOff(){
-	var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", , true);
-}

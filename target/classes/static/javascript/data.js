@@ -110,4 +110,33 @@ class Data {
 		}
 		return -1;
 	}
+
+	pushToDataBase(time, cube){
+        var data = cube.concat(time.toString);
+        this.sendPostJson("/users/user/jhoeller/times", data);
+
+	}
+
+    //https://gist.github.com/Zirak/3151454
+    //Thank you based Zirak
+	sendPostJson ( url, data) {
+    	var xhr = new XMLHttpRequest();
+    	xhr.responseJSON = null;
+
+    	xhr.open( 'POST', url );
+    	xhr.setRequestHeader( 'Content-Type', 'application/json' );
+
+    	xhr.addEventListener( 'load',  function () {
+    		//my old man once told me "Zirak, sometimes, you must face the dangers
+    		// of life head on". he then threw me in a shark tank. but I'm sure it
+    		// applies here too.
+    		//...I was only 7
+    		xhr.responseJSON = JSON.parse( xhr.responseText );
+
+    	});
+
+    	console.log(JSON.stringify(data));
+    	xhr.send( JSON.stringify(data));
+
+    }
 }
