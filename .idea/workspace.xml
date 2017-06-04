@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9ad7079-a586-4ec5-9d76-e521854ad0fc" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/javascript/application.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/javascript/cable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/javascript/script.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/javascript/application.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/javascript/cable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/javascript/script.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/javascript/data.js" afterPath="$PROJECT_DIR$/src/main/resources/static/javascript/data.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/javascript/timer.js" afterPath="$PROJECT_DIR$/src/main/resources/static/javascript/timer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/new.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/new.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/javascript/data.js" afterPath="$PROJECT_DIR$/target/classes/static/javascript/data.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/javascript/timer.js" afterPath="$PROJECT_DIR$/target/classes/static/javascript/timer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/new.html" afterPath="$PROJECT_DIR$/target/classes/templates/new.html" />
     </list>
     <ignored path="PuzzelTimer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -668,6 +656,14 @@
       <option name="presentableId" value="Default" />
       <updated>1494267919381</updated>
     </task>
+    <task id="LOCAL-00001" summary="Fixed the js&#10;">
+      <created>1496577700377</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1496577700377</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -765,6 +761,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fixed the js&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the js&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
