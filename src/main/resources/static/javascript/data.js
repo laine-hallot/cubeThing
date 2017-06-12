@@ -1,4 +1,7 @@
+var xmlhttp = new XMLHttpRequest();
+var url = "/users/user/jhoeller/times";
 class Data {
+
 	constructor(data, ctx, canvas) {
 		this.x = -1;
 		this.y = -1;
@@ -111,7 +114,7 @@ class Data {
 		return -1;
 	}
 
-	pushToDataBase(time, cube){
+	/*pushToDataBase(time, cube){
         var data = cube.concat(time.toString);
         this.sendPostJson("/users/user/jhoeller/times", data);
 
@@ -138,5 +141,27 @@ class Data {
     	console.log(JSON.stringify(data));
     	xhr.send( JSON.stringify(data));
 
+    }*/
+
+    getUserData(){
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var myArr = JSON.parse(this.responseText);
+                myFunction(myArr);
+            }
+        };
     }
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+
+    function myFunction(arr) {
+        var out = "";
+        var i;
+        for(i = 0; i < arr.length; i++) {
+            out += '<a href="' + arr[i].url + '">' +
+            arr[i].display + '</a><br>';
+        }
+        document.getElementById("id01").innerHTML = out;
+    }
+    getData();
 }

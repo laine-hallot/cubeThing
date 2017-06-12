@@ -1,6 +1,7 @@
 package io.PuzzelTimer;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.web.ErrorController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -12,22 +13,27 @@ import java.util.Map;
  */
 
 @Controller
-public class HomePageController {
+public class HomePageController implements ErrorController{
 
     @Value("${welcome.message:test}")
     private String message = "Hello World";
 
 
     @RequestMapping("/meme")
-    String hello(Map<String, Object> model){
-        model.put("message", this.message);
+    String hello(){
         return "new";
     }
 
-    @RequestMapping("/greeting")
-    public String greeting() {
-        return "index";
+    @RequestMapping("/ohfuck")
+    String error(){
+        return "ohFuck";
     }
+
+    @Override
+    public String getErrorPath() {
+        return "/ohfuck";
+    }
+
 }
 
 
